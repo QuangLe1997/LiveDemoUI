@@ -1,0 +1,7 @@
+demo-livestream-rec:
+  build: .
+  restart: always
+  environment:
+    VUE_APP_API_BASE_URL: ${VUE_APP_API_BASE_URL},
+  ports:
+    - "7006:7006"
