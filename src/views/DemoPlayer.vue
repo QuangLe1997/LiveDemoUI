@@ -581,6 +581,37 @@ export default {
     onRemoveProd(idx) {
       this.allProducts.splice(idx, 1);
     },
+    trackingBoxes(groupsOld, newBoxes) {
+      let result = [];
+      let newGroup = _.mapValues(_.groupBy(newBoxes, "id"), (clist) =>
+        clist.map((box) => _.omit(box, "id"))
+      );
+      const isSameBoxes = (box1, box2, range_center) => {
+        const center1 = [box1.x + box1.width / 2, box1.y + box1.height / 2];
+        const center2 = [box2.x + box2.width / 2, box2.y + box2.height / 2];
+        const diff_center = Math.sqrt(
+          (center2[0] - center1[0]) ** 2 + (center2[1] - center1[1]) ** 2
+        );
+        return (
+          diff_center <= range_center * ((box1.width + box2.height) / 2) &&
+          Math.abs(box1.width * box1.height - box1.width * box1.height) < 100
+        );
+      };
+      for (const [idBx, boxData] of Object.entries(newGroup)) {
+        let boxes = [];
+        if (groupsOld.hasOwnProperty(idBx)) {
+          for (const box of groupsOld[idBx]) {
+            for (const boxNew of boxData) {
+              if (isSameBoxes(box, boxNew, 0.4)) {
+                boxes.push(box);
+              } else {
+                boxes.push(boxNew);
+              }
+            }
+          }
+        }
+      }
+    },
   },
   mounted() {
     this.pixelTempt = this.pixelGroup;
