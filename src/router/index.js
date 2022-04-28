@@ -4,6 +4,8 @@ import Router from "vue-router";
 import Vue from "vue";
 // Globals
 import demo from "./modules/demo";
+import showcase from "./modules/showcase";
+import landing from "./modules/landing";
 
 import BaseLayout from "@/layout/index";
 import products from "./modules/products";
@@ -14,7 +16,7 @@ export const constantRoutes = [
   {
     path: "",
     name: "Home",
-    redirect: "/demo",
+    redirect: "/home",
     hidden: true,
   },
 ];
@@ -31,7 +33,7 @@ export const asyncRoutes = [
       icon: "",
       requiresAuth: false,
     },
-    children: [demo, products],
+    children: [landing, showcase, demo, products],
   },
   { path: "*", redirect: "/404", hidden: true },
 ];

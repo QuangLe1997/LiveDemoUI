@@ -1,5 +1,5 @@
 <template>
-  <v-app class="app">
+  <v-app id="app">
     <router-view />
   </v-app>
 </template>
@@ -7,7 +7,6 @@
 <script>
 import { io } from "socket.io-client";
 import { sync } from "vuex-pathify";
-
 export default {
   name: "App",
   data() {

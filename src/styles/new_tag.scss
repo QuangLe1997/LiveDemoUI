@@ -1,0 +1,120 @@
+.ads-container {
+    .movingElement {
+        transition: opacity .2s ease 250ms;
+        cursor: pointer;
+        position: absolute;
+        z-index: 3;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        .tag-inner-box {
+            height: 5px !important;
+            width: 5px !important;
+            z-index: 1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            animation: pulse-animation 0.5s infinite;
+        }
+        &:hover{
+            .buy-now {
+                    position: absolute;
+                    background-image: url(https://static2.vieon.vn/ai-storage/ai_vlz/GeneralImage/shopping-show.svg);
+                    height: 60px;
+                    width: 60px;
+                    visibility: visible;
+                }
+            }
+        }
+    .fixedElement {
+        z-index: 2;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        .wrapper {
+            position: absolute;
+            cursor: pointer;
+            white-space: pre;
+            font-size: 16px;
+            text-align: left;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            background-color: gray;
+            transition-delay: 1.5s;
+            animation: heightExpand 0.5s ease-in-out;
+            -webkit-animation: heightExpand 0.5s ease-in-out;
+            .cornerBox {
+                position: absolute;
+                width: 5px;
+                height: 5px;
+            }
+            .box-line {
+                position: absolute;
+                width: 100%;
+                border-top: 1px solid #fafafa;
+                z-index: 4;
+                transition-delay: 0.5s;
+                animation: lineExpand 1s ease-in-out;
+                -webkit-animation: lineExpand 1s ease-in-out;
+            }
+            .mainTag {
+                height: 100%;
+                width: 100%;
+                perspective: 1000px;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+                overflow: hidden;
+                color: white;
+                z-index: 4;
+                box-sizing: border-box;
+                padding: 4px 6px;
+                animation: lineExpand 1s ease-in-out;
+                -webkit-animation: lineExpand 1s ease-in-out;
+                &:hover{
+                    padding: 6px 12px !important;
+                }
+            }
+        }
+    }
+    h1 {
+        white-space: pre;
+        font-size: 15px;
+        text-align: left;
+        padding: 2px 2px;
+    }
+    h2 {
+        margin: auto;
+        white-space: pre;
+        font-size: 14px;
+        text-align: left;
+        padding: 2px 2px;
+    }
+    .line-dot {
+        position: absolute;
+        height: 16px;
+        width: 16px;
+        margin: -4px;
+        z-index: 4;
+    }
+}
+@keyframes lineExpand {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+@keyframes heightExpand {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 100%;
+    }
+}

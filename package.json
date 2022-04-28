@@ -10,8 +10,10 @@
   "dependencies": {
     "axios": "^0.26.1",
     "core-js": "^3.6.5",
+    "jquery": "^3.6.0",
     "mdi": "^2.2.43",
     "plyr": "^3.6.12",
+    "popper.js": "^1.16.1",
     "socket.io-client": "^4.4.1",
     "videojs-contrib-hls": "^5.15.0",
     "videojs-contrib-hls.js": "^3.2.0",
@@ -22,7 +24,8 @@
     "vuetify": "^2.6.0",
     "vuex": "^3.4.0",
     "vuex-pathify": "^1.4.5",
-    "vuex-router-sync": "^5.0.0"
+    "vuex-router-sync": "^5.0.0",
+    "waypoints": "^4.0.1"
   },
   "devDependencies": {
     "@mdi/font": "^5.9.55",

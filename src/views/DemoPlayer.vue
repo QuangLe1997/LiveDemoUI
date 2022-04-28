@@ -390,8 +390,8 @@ export default {
       shoppingWidth: 40,
       shapeLineW: 130,
       timePlay: null,
-      heightVideo: 0,
-      widthVideo: 0,
+      heightVideo: 1,
+      widthVideo: 1,
       showIconShopping: true,
       showInfoProd: true,
       showLabelProd: false,
@@ -688,9 +688,17 @@ export default {
 
 .message {
   padding: 3px;
+  width: 100%;
+  display: inline;
+  justify-content: center;
 }
 
 .video-player {
   --plyr-color-main: $color-primary !important;
+}
+.test-line {
+  position: absolute;
+  z-index: 999;
+  background-color: yellow;
 }
 </style>

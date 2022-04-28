@@ -1,33 +1,22 @@
 <template>
-  <v-app-bar id="appBar" app flat clipped-left class="primary pr-4 app-bar">
-    <f-app-bar-prepend></f-app-bar-prepend>
-    <v-btn
-      v-if="$vuetify.breakpoint.lgAndUp"
-      icon
-      @click="changeDrawerMini()"
-      color="white"
-      class="mr-12"
-    >
-      <v-icon>mdi-swap-horizontal</v-icon>
-    </v-btn>
-    <v-spacer></v-spacer>
+  <v-app-bar id="appBar" app flat clipped-left class="pr-4 app-bar">
+    <v-row class="d-flex align-center justify-center white--text">
+      <v-col cols="auto">
+        <span>Overview</span>
+      </v-col>
+      <v-col cols="auto">
+        <span>ShowCase</span>
+      </v-col>
+      <v-col cols="auto">
+        <span>Tech spec</span>
+      </v-col>
+    </v-row>
   </v-app-bar>
 </template>
-<script>
-import FAppBarPrepend from "./VAppBarPrepend.vue";
-import { call, sync } from "vuex-pathify";
-
-export default {
-  components: { FAppBarPrepend },
-  data() {
-    return {};
-  },
-  computed: {
-    appName: sync("app/appName"),
-    navDrawerWidth: sync("app/navDrawerWidth"),
-  },
-  methods: {
-    changeDrawerMini: call("app/changeDrawerMini"),
-  },
-};
-</script>
+<script></script>
+<style>
+.app-bar {
+  background-color: #f2cf43;
+  background-image: linear-gradient(315deg, #f2cf43 0%, #19a186 74%);
+}
+</style>

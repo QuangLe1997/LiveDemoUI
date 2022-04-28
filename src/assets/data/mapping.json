@@ -1,0 +1,22 @@
+[
+  {
+    "id": "iphone",
+    "image": "https://image.thanhnien.vn/w1024/Uploaded/2022/yfrph/2022_03_09/a80ffcf1-9717-4843-aaf8-f4a2a826ddbf-7587.jpeg",
+    "name": "Iphone 12 pro-max",
+    "description": "128GB",
+    "discount": "Trả trước 30% qua Home Credit. Thủ tục chỉ cần CMND + GPLX;\nHoặc trả góp lãi suất 0% qua thẻ tín dụng Visa, Master, JCB.",
+    "priceNew": "23.400.000 VND",
+    "priceOld": "25.600.000 VND",
+    "url": "#"
+  },
+  {
+    "id": "tivi",
+    "name": "Smart Tivi Samsung",
+    "image": "https://cdn.tgdd.vn/Products/Images/1942/219400/samsung-ua32t4300-2-1-org.jpg",
+    "description": "32 inch UA32T4300 ",
+    "discount": "Miễn phí công lắp đặt\n\n2\nGiảm 480,000đ khi mua thiết bị đầu thu AVG và miễn phí 6 tháng cước xem truyền hình\n\n3\nGiảm 300,000đ khi mua thiết bị đầu thu và 6 tháng thuê bao K+",
+    "priceNew": "7.400.000 VND",
+    "priceOld": "7.600.000 VND",
+    "url": "#"
+  }
+]
